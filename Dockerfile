@@ -5,7 +5,11 @@ RUN apk add --no-cache \
   nodejs \
   npm \
   postgresql-dev \
+  sqlite-dev \
   tzdata
+RUN gem install \
+  foreman \
+  mailcatcher
 
 RUN mkdir /app
 WORKDIR /app
